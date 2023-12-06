@@ -39,7 +39,7 @@ export default function Navbar() {
                         {navlinks.map((link,index) => (
                             <a
                             key={index}
-                            className='text-xl text-gray-700 transition-all duration-500 hover:bg-blue-600 hover:text-white mt-2 px-3 py-2 rounded-md text-md'
+                            className='text-xl text-gray-700 transition-all duration-500 hover:bg-blue-600 hover:text-white mt-2 px-3 py-2 rounded-md text-md cursor-pointer'
                             >{link.title}</a>
                         ))}
                     </div>
@@ -57,7 +57,7 @@ export default function Navbar() {
                     <div className='pt-2 pb-3 ox-2 space-y-1 sm:px-3'>
                     {navlinks.map((link) => (
                             <a
-                            className='text-gray-300 transition-all duration-500 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-md'
+                            className='text-gray-300 transition-all duration-500 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-md cursor-pointer'
                             >{link.title}</a>
                         ))}
                     </div>
