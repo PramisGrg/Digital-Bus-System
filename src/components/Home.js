@@ -12,7 +12,7 @@ export default function Home() {
          </div>
         <div className='grid place-items-center h-screen'>
          <form className='bg-sky-100 p-10 rounded-md'>
-           <h2 className='text-2xl'>Login !</h2>
+           <h2 className='font-bold text-2xl'>Login !</h2>
             <p className='mb-4'>Welcome back, please enter your details.</p>
            <div>
               <label >Username</label>
