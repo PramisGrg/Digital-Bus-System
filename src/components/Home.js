@@ -22,7 +22,7 @@ export default function Home() {
             <label>Password</label>
             <input type='password' placeholder='Enter your Password' className='w-full border rounded-md bg-transparent border-gray-400 p-3 my-2'></input>
           </div>
-          <button className=' w-full bg-blue-600 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded items-center my-2'>Submit</button>
+          <button className=' w-full bg-blue-600 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded items-center my-2 hover:scale-105 duration-300'>Submit</button>
          </form>
        </div>
        </div>
