@@ -1,5 +1,5 @@
-import React,{useState} from 'react'
-import { FaBusAlt, FaBars, FaTimes } from "react-icons/fa";
+import {Link} from 'react-router-dom'
+import { FaBusAlt } from "react-icons/fa";
 
 const navlinks = [
     {
@@ -11,19 +11,14 @@ const navlinks = [
         link : '/about',
     },
     {
-        title : 'Member Login',
-        link : '/member_login',
+        title : 'Balance Inquiry',
+        link : '/balance_inquiry',
     },
 ]
 
 
 export default function Navbar() {
-    const [open, setOpen] = useState(false)
-
-    const handleMenu = () => {
-        setOpen((prev) => !prev);
-    }
-
+   
   return (
     <div className='shadow-lg w-full p-4'>
             <div className='mx-auto px-4 sm:px-6 lg:px-8'>
@@ -36,33 +31,15 @@ export default function Navbar() {
                 </div>
                 <div className='hidden md:block'>
                     <div className='ml-10 flex items-baseline space-x-4'>
-                        {navlinks.map((link,index) => (
-                            <a
-                            key={index}
+                        {navlinks.map((x) => (
+                            <Link to={x.link}
                             className='text-xl text-gray-700 transition-all duration-500 hover:bg-blue-600 hover:text-white mt-2 px-3 py-2 rounded-md text-md cursor-pointer'
-                            >{link.title}</a>
+                            >{x.title}</Link>
                         ))}
                     </div>
-                </div>
-                <div className='mr-2 flex md:hidden'>
-                    <button type='button' onClick={() => {}} className='flex items-center justify-center p-2 rounded-md duration-300 hover:bg-blue-300'>
-                        <span className='sr-only'>Open Main Menu</span>
-                        {open == true ? <FaTimes/> : <FaBars/>}
-                    </button>
                 </div>
               </div>
             </div> 
-            { open ? (
-                <div className='md:hidden'> 
-                    <div className='pt-2 pb-3 ox-2 space-y-1 sm:px-3'>
-                    {navlinks.map((link) => (
-                            <a
-                            className='text-gray-300 transition-all duration-500 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-md cursor-pointer'
-                            >{link.title}</a>
-                        ))}
-                    </div>
-                </div>
-                ): null}
     </div>
   )
 }
