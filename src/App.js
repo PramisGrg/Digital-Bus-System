@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import About from './components/About';
 import BalanceInquiry from './components/BalanceInquiry';
 import Register from './components/Register';
+import Maps from './components/Maps';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/balance_inquiry' element={<BalanceInquiry/>} />
         <Route path='/register' element={<Register/>} />
       </Routes>
+      <Maps/>
     </BrowserRouter>
   );
 }

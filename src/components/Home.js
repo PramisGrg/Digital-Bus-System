@@ -2,10 +2,12 @@ import React from 'react'
 import bus from '../assets/bus.jpeg'
 import Navbar from './Navbar'
 import Maps from './Maps.js'
+import {MapContainer, TileLayer} from 'react-leaflet'
+import 'leaflet/dist/leaflet.css'
 
 export default function Home() {
   return (
-    <div>
+    <>
         <Navbar/>
         <div className='grid grid-cols-2 bg-gradient-to-r from-sky-500 to-indigo-200'>
          <div>
@@ -27,9 +29,6 @@ export default function Home() {
          </form>
          </div>
        </div>
-       <div className>
-        <Maps/>
-       </div>
-    </div>
+    </>
   )
 }
