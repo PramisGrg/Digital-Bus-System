@@ -1,6 +1,7 @@
 import React from 'react'
 import bus from '../assets/bus.jpeg'
 import Navbar from './Navbar'
+import Maps from './Maps.js'
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
          </form>
        </div>
        </div>
+       <Maps/>
     </div>  
   )
 }
