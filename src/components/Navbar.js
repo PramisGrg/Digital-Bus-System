@@ -27,7 +27,7 @@ export default function Navbar() {
                     <div className='text-3xl pr-2 pt-2'>
                         <FaBusAlt/>
                     </div>
-                    <a href='/' className='font-bold pt-3 text-3xl'>यात्रा को सहयात्री</a>
+                    <a href='/' className='font-bold pt-3 text-3xl'>सहज यात्रा</a>
                 </div>
                 <div className='hidden md:block'>
                     <div className='ml-10 flex items-baseline space-x-4'>
