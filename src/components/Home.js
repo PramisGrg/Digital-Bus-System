@@ -2,7 +2,6 @@ import React from "react";
 import bus from "../assets/bus.jpeg";
 import Navbar from "./Navbar";
 import Maps from "./Maps.js";
-import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 export default function Home() {

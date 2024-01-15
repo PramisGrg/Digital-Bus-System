@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 import Register from "./Register";
 
-export default function BalanceInquiry() {
+const Admin = () => {
   return (
     <div>
       <Navbar />
@@ -11,13 +11,13 @@ export default function BalanceInquiry() {
         <div className="grid place-items-center h-screen pb-10">
           <form className="bg-sky-100 p-10 rounded-md">
             <h2 className="flex font-bold justify-center text-2xl">
-              Sign Up !
+              Admin Login
             </h2>
             <p className="flex justify-center mb-5">
               Please enter your details.
             </p>
             <div>
-              <label>Phone number</label>
+              <label>Phone Number</label>
               <input
                 type="tel"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
@@ -27,7 +27,7 @@ export default function BalanceInquiry() {
               ></input>
             </div>
             <div>
-              <label for="phoneNumber">Password</label>
+              <label>Password</label>
               <input
                 type="password"
                 id="phoneNumber"
@@ -35,23 +35,16 @@ export default function BalanceInquiry() {
                 className="w-full border rounded-md bg-transparent border-gray-400 p-3 my-2"
               ></input>
             </div>
-            <button
-              className=" w-full bg-blue-600 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded items-center my-2 hover:scale-105 duration-300"
-              onClick={console.log("Check Balance")}
-            >
-              Check Balance
-            </button>
-            <div className="mt-5 text-sm flex justify-between items-center">
-              <p>Don't have account ?</p>
-              <Link to="/register" element={<Register />}>
-                <button className="py-2 px-5 bg-white border rounded-xl hover:scale-120 duration-300">
-                  Register
-                </button>
-              </Link>
+            <div>
+              <button className=" w-full bg-blue-600 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded items-center my-2 hover:scale-105 duration-300">
+                Log in
+              </button>
             </div>
           </form>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Admin;
